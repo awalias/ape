@@ -1,9 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "APE : Ant's Privacy Extension",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extension protects your privacy while browsing the web",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -23,7 +22,11 @@
   "permissions": [
     "contentSettings",
     "cookies",
-    "management"
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "tabs"
   ],
   "content_scripts": [
     {

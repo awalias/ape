@@ -13,7 +13,6 @@ var requestFilter = {
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	var headers = details.requestHeaders;
-	console.log("pimpin");
 		// if( !localStorage['user-agent'] ) {
 	// 	return;
 	// }
@@ -25,6 +24,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	if(i < headers.length) {
 		headers[i].value = "HALLO, VORLD!";//localStorage['user-agent'];
 	}
+
 	return {requestHeaders: headers};
 }, requestFilter, ['requestHeaders','blocking']);
 
@@ -32,13 +32,3 @@ chrome.webRequest.onBeforeRequest.addListener(
 	function(details) { return {cancel: true}; },
 	{urls: ["*://www.evil.com/*"]},
 	["blocking"]);
-
-// (function() {
-//     var userAgent = window.navigator.userAgent;
-//     Object.defineProperty(window.navigator, "userAgent", {
-//         get: function() {
-//             console.log("hello from useragent");
-//             return userAgent;
-//         }
-//     });
-// })();

@@ -21,10 +21,20 @@
 /* jshint browser:true */
 var actualCode =  '(' + function() {
     'use strict';
-    //console.log("running");
-    var navigator = Object.create(window.navigator);
-    // Pretend to be Windows XP
-    Object.defineProperties(navigator, {
+
+    function Navigator() {
+
+    }
+    
+    var fake_navigator = new Navigator();
+
+	for (var i in navigator) {
+	  fake_navigator[i] =  navigator[i];
+	}	
+
+	fake_navigator.__proto__ = navigator.__proto__ ;
+    
+    Object.defineProperties(fake_navigator, {
         userAgent: {
             value: "HORSE",
             configurable: false,
@@ -38,14 +48,14 @@ var actualCode =  '(' + function() {
             writable: false
         },
         platform: {
-            value: 'Win32',
+            value: "halal",
             configurable: false,
             enumerable: true,
             writable: false
         },
     });
     Object.defineProperty(window, 'navigator', {
-        value: navigator,
+        value: fake_navigator,
         configurable: false,
         enumerable: false,
         writable: false

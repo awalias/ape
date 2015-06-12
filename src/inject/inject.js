@@ -4,9 +4,10 @@ var actualCode =  '(' + function() {
     'use strict';
 
     var mock_date = function() {
-
-    	var actual_date = new Date();
-    	var actual_date_string = Date();
+    	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  			"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+		];
+		var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     	var Fake_Date = Date;
 
@@ -23,9 +24,74 @@ var actualCode =  '(' + function() {
 	        writable: false
 	    });
 
-	    Date.prototype.getTimezoneOffset = function() { return 0; }
-    	
-    	// TODO: override time methods and constructor string to account for timezoneoffset
+	    Date.prototype.getTimezoneOffset = function() { 
+	    	return 0; 
+	    }
+
+		Date.prototype.toString = function()
+		{
+			/* Fri Jun 12 2015 14:53:34 GMT+0100 (BST) */
+			/* Sat Jun 12 2015 14:7:56 GMT */
+		    return  dayNames[this.getDay()] + " " +
+		    	monthNames[this.getMonth()] + " " + 
+		    	('0' + this.getDate()).slice(-2)    + " " +  
+		     	this.getFullYear() + " " + 
+		     	('0' + this.getHours()).slice(-2)   + ":" + 
+		     	('0' + this.getMinutes()).slice(-2) + ":" + 
+		     	('0' + this.getSeconds()).slice(-2) + " GMT";
+		}
+
+		Date.prototype.toLocaleDateString = function() {
+			return this.getMonth() + "/" + this.getDate() + "/" + this.getFullYear();
+		}
+
+		Date.prototype.toLocaleTimeString = function() {
+			var suffix = "AM";
+			var hours = this.getHours();
+			if (hours > 12) {
+				hours = hours - 12;
+				suffix = "PM";
+			}
+			return hours + ":" + 
+		     	('0' + this.getMinutes()).slice(-2) + ":" + 
+		     	('0' + this.getSeconds()).slice(-2) + " " + suffix;
+		}
+
+		Date.prototype.toLocaleString = function() {
+			return this.toLocaleDateString() + ", " + this.toLocaleTimeString();
+		}
+
+		Date.prototype.getDate = function() {
+			return this.getUTCDate();
+		}
+
+		Date.prototype.getDay = function() {	
+			return this.getUTCDay();	
+		}
+
+		Date.prototype.getFullYear = function() {
+			return this.getUTCFullYear();
+		}
+
+		Date.prototype.getHours = function() {	
+			return this.getUTCHours();	
+		}
+
+		Date.prototype.getMilliseconds = function() {
+			return this.getUTCMilliseconds();
+		}
+
+		Date.prototype.getMinutes = function() {
+			return this.getUTCMinutes();
+		}
+
+		Date.prototype.getMonth = function() {
+			return this.getUTCMonth();
+		}
+
+		Date.prototype.getSeconds = function() {
+			return this.getUTCSeconds();	
+		}
     }
 
 	var mock_screen = function() {
@@ -43,19 +109,49 @@ var actualCode =  '(' + function() {
 
 	    Object.defineProperties(fake_screen, {
 	        height: {
-	            value: 500,
+	            value: 768,
 	            configurable: false,
 	            enumerable: true,
 	            writable: false
 	        },
 	        availHeight: {
-	            value: 473,
+	            value: window.innerHeight,
 	            configurable: false,
 	            enumerable: true,
 	            writable: false
 	        },
 	        width: {
-	            value: 800,
+	            value: 1366,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
+	        availWidth: {
+	            value: window.innerWidth,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
+	        availLeft: {
+	            value: 0,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
+	        availTop: {
+	            value: 0,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
+	        colorDepth: {
+	            value: 24,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
+	        pixelDepth: {
+	            value: 24,
 	            configurable: false,
 	            enumerable: true,
 	            writable: false
@@ -85,19 +181,19 @@ var actualCode =  '(' + function() {
 
 	    Object.defineProperties(fake_navigator, {
 	        userAgent: {
-	            value: "HORSE",
+	            value: "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36",
 	            configurable: false,
 	            enumerable: true,
 	            writable: false
 	        },
 	        appVersion: {
-	            value: "HORSE",
+	            value: "5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36",
 	            configurable: false,
 	            enumerable: true,
 	            writable: false
 	        },
 	        platform: {
-	            value: "halal",
+	            value: "Win32",
 	            configurable: false,
 	            enumerable: true,
 	            writable: false

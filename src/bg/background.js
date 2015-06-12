@@ -22,13 +22,13 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 		}
 	}
 	if(i < headers.length) {
-		headers[i].value = "HALLO, VORLD!";//localStorage['user-agent'];
+		headers[i].value = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36";//localStorage['user-agent'];
 	}
 
 	return {requestHeaders: headers};
 }, requestFilter, ['requestHeaders','blocking']);
 
-chrome.webRequest.onBeforeRequest.addListener(
-	function(details) { return {cancel: true}; },
-	{urls: ["*://www.evil.com/*"]},
-	["blocking"]);
+// chrome.webRequest.onBeforeRequest.addListener(
+// 	function(details) { return {cancel: true}; },
+// 	{urls: ["*://www.evil.com/*"]},
+// 	["blocking"]);

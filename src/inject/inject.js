@@ -198,6 +198,12 @@ var actualCode =  '(' + function() {
 	            enumerable: true,
 	            writable: false
 	        },
+	        plugins: {
+	            value: undefined,
+	            configurable: false,
+	            enumerable: true,
+	            writable: false
+	        },
 	    });
 	    Object.defineProperty(window, 'navigator', {
 	        value: fake_navigator,

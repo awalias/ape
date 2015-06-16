@@ -1,5 +1,4 @@
 /* jshint browser:true */
-
 var actualCode =  '(' + function() {
     'use strict';
 
@@ -219,6 +218,10 @@ var actualCode =  '(' + function() {
     mock_date();
 
 } + ')();';
+
+// chrome.runtime.sendMessage({localstorage: "ape-active"}), function(response){
+//     var active = response.active;
+// }
 
 document.documentElement.setAttribute('onreset', actualCode);
 document.documentElement.dispatchEvent(new CustomEvent('reset'));

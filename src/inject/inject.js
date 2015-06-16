@@ -219,10 +219,11 @@ var actualCode =  '(' + function() {
 
 } + ')();';
 
-// chrome.runtime.sendMessage({localstorage: "ape-active"}), function(response){
-//     var active = response.active;
-// }
-
-document.documentElement.setAttribute('onreset', actualCode);
-document.documentElement.dispatchEvent(new CustomEvent('reset'));
-document.documentElement.removeAttribute('onreset');
+chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
+    var active = response.active;
+	if (active=="true") {
+		document.documentElement.setAttribute('onreset', actualCode);
+		document.documentElement.dispatchEvent(new CustomEvent('reset'));
+		document.documentElement.removeAttribute('onreset');
+	}
+});

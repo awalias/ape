@@ -39,13 +39,14 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
 }, requestFilter, ['requestHeaders','blocking']);
 
-// chrome.runtime.onMessage.addListener(
-//   function(request, sender, sendResponse){
-
-//   if(request.localstorage == "ape-active") {
-//     sendResponse({active: localStorage['ape-active']});
-
-//   } else {
-//     sendResponse({});
-//   }
-// });
+ chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        if (request.newIconPath) {
+	        chrome.browserAction.setIcon({
+	            path: "../../icons/"+request.newIconPath
+	        });
+    	} else if (request.active) {
+    		sendResponse({ "active" : localStorage["ape-active"]});
+    	}
+    }
+);

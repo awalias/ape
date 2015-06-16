@@ -3,6 +3,7 @@
 // var settings = new Store("settings", {
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
+localStorage["profile_number"] = 1;
 
 //example of using a message handler from the inject scripts
 var requestFilter = {
@@ -46,7 +47,9 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	            path: "../../icons/"+request.newIconPath
 	        });
     	} else if (request.active) {
-    		sendResponse({ "active" : localStorage["ape-active"]});
+    		sendResponse({ "active" : localStorage["ape-active"],
+    					   "profile_number" : localStorage["profile_number"] 
+    		});
     	}
     }
 );

@@ -3,12 +3,14 @@
 <script src="../../js/jquery/jquery.js"></script>
 <link href="../../css/bootstrap-toggle.css" rel="stylesheet">
 <script src="../../js/bootstrap-toggle.js"></script>
+<link href="browser_action.css" rel="stylesheet">
 
 <style type="text/css">
 	#mainPopup {
-		padding: 10px;
+		padding-left: 25px;
+		padding-top: 5px;
 		height: 200px;
-		width: 400px;
+		width: 300px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
 	}
 	h1 {
@@ -17,8 +19,8 @@
 </style>
 
 <div id="mainPopup">
-<h1>APE: Ant's Privacy Extension</h1>
-<div class="checkbox">
+<h1>APE <small class="tagline">Ant's Privacy Extension</small></h1>
+<div class="checkbox" style="padding-top:10px;">
   <label>
     <input type="checkbox" id="active" data-toggle="toggle" checked>
     <span id="active_text">APE is active</span>

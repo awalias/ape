@@ -3,7 +3,7 @@
 // var settings = new Store("settings", {
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
-localStorage["profile_number"] = 1;
+localStorage["profile_number"] = 0;
 
 //example of using a message handler from the inject scripts
 var requestFilter = {
@@ -13,7 +13,7 @@ var requestFilter = {
 };
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
-	if (localStorage['ape-active']=="true") {
+	if (localStorage['ape-active']!="false") {
 
 		var headers = details.requestHeaders;
 

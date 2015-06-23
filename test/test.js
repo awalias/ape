@@ -9,7 +9,7 @@ $("#appVersion").html(navigator.appVersion);
 $("#platform").html(navigator.platform);
 
 //plugins
-$("#plugins").html(navigator.plugins);
+//$("#plugins").html(navigator.plugins);
 
 //Navigator Class Name
 $("#Navigator").html(navigator.constructor.toString());

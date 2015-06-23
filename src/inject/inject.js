@@ -5,7 +5,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 
 	var actualCode =  '(' + function(ua_profile) {
 	    'use strict';
-	    console.log(ua_profile)
+	    
 	    var mock_date = function() {
 	    	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 	  			"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -119,7 +119,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		            writable: false
 		        },
 		        availHeight: {
-		            value: JSON.parse(ua_profile.screen.availHeight),
+		            value: ua_profile.screen.availHeight,
 		            configurable: false,
 		            enumerable: true,
 		            writable: false
@@ -131,7 +131,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		            writable: false
 		        },
 		        availWidth: {
-		            value: JSON.parse(ua_profile.screen.availWidth),
+		            value: ua_profile.screen.availWidth,
 		            configurable: false,
 		            enumerable: true,
 		            writable: false
@@ -224,7 +224,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 
 	} + ')(' + JSON.stringify(profiles[profile_number]) +');';
 
-	if (active=="true") {
+	if (active!="false") {
 		document.documentElement.setAttribute('onreset', actualCode);
 		document.documentElement.dispatchEvent(new CustomEvent('reset'));
 		document.documentElement.removeAttribute('onreset');

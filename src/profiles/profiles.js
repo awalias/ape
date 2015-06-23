@@ -6,7 +6,7 @@ profiles = [
 		platform : "Win32",
 		plugins : undefined,
 		screen : { height : 768,
-				   width  : 1336,
+				   width  : 1366,
 				   availHeight : window.innerHeight,
 				   availWidth  : window.innerWidth,
 				   availTop    : 0,

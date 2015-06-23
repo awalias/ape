@@ -14,7 +14,8 @@ profiles = [
 				   pixelDepth  : 24,
 				   colorDepth  : 24 },
 		timezone : 0,
-		setToUTC : true 
+		setToUTC : true,
+		acceptedLanguages: "en-US,en;q=0.5"
 	},
 
 	{
@@ -32,6 +33,7 @@ profiles = [
 				   pixelDepth  : 24,
 				   colorDepth  : 24 },
 		timezone : 0,
-		setToUTC : true 
+		setToUTC : true,
+		acceptedLanguages: "en-US,en;q=0.5"
 	}
 ];

@@ -3,6 +3,17 @@
 // var settings = new Store("settings", {
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
+function loadScript(scriptName, callback) {
+    var scriptEl = document.createElement('script');
+    scriptEl.src = chrome.extension.getURL('lib/' + scriptName + '.js');
+    scriptEl.addEventListener('load', callback, false);
+    document.head.appendChild(scriptEl);
+}
+
+loadScript("../src/profiles/profiles", function() {
+	localStorage["profiles"] = JSON.stringify(profiles);
+});
+
 localStorage["profile_number"] = 0;
 
 //example of using a message handler from the inject scripts
@@ -29,10 +40,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 			}
 		}
 		if(UA_index != -1) {
-			headers[UA_index].value = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36";//localStorage['user-agent'];
+			headers[UA_index].value = JSON.parse(localStorage["profiles"])[localStorage["profile_number"]].userAgent;
 		}
 		if(AL_index != -1) {
-			headers[AL_index].value = "en-US,en;q=0.5";
+			headers[AL_index].value = JSON.parse(localStorage["profiles"])[localStorage["profile_number"]].acceptedLanguages;
 		}
 	} // end if (localStorage['ape-active']);
 

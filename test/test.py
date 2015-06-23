@@ -8,6 +8,12 @@ import SocketServer
 import unittest
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
+import re
+
+def getHtmlTableData(tblbody):
+	trs=re.findall(r'(?<=<tr>).*?(?=</tr>)', tblbody)
+	content=[re.findall(r'(?<=<td>).*?(?=</td>)', tr) for tr in trs]
+	return content
 
 def cleanup():
 	grepCmd = "ps -aef | grep -E 'chromedriver|Chrome'"
@@ -28,7 +34,11 @@ class JavascriptTests(unittest.TestCase):
 		if os.uname()[0] == "Darwin":
 			self.driver = webdriver.Chrome('../../chromedriver', chrome_options = chop)
 
-		self.driver.get('http://whatsmyuseragent.com/');
+		self.driver.get('https://panopticlick.eff.org/index.php?action=log&js=yes');
+		time.sleep(7)
+		element = self.driver.find_element_by_id("results")
+		html = element.get_attribute('innerHTML')
+		self.htmlTableData = getHtmlTableData(html)
 
 	def test_navigator_class_name(self):
 		value = self.driver.execute_script("return navigator.constructor.toString()")
@@ -43,9 +53,12 @@ class JavascriptTests(unittest.TestCase):
 		self.assertEqual("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36", value)
 
 	def test_http_userAgent(self):
-		element = self.driver.find_element_by_class_name("info")
-		html = element.get_attribute('innerHTML')
-		self.assertIn("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36", html)
+		value = self.htmlTableData[1][3]
+		self.assertIn("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36", value)
+
+	def test_http_accept_headers(self):
+		value = self.htmlTableData[2][3]
+		self.assertIn("text/html, */*  gzip, deflate en-US,en;q=0.5", value)
 
 	def test_appVersion(self):
 		value = self.driver.execute_script("return navigator.appVersion")

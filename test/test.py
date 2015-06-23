@@ -28,7 +28,7 @@ class JavascriptTests(unittest.TestCase):
 		if os.uname()[0] == "Darwin":
 			self.driver = webdriver.Chrome('../../chromedriver', chrome_options = chop)
 
-		self.driver.get('http://google.com');
+		self.driver.get('http://whatsmyuseragent.com/');
 
 	def test_navigator_class_name(self):
 		value = self.driver.execute_script("return navigator.constructor.toString()")
@@ -41,6 +41,11 @@ class JavascriptTests(unittest.TestCase):
 	def test_userAgent(self):
 		value = self.driver.execute_script("return navigator.userAgent")
 		self.assertEqual("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36", value)
+
+	def test_http_userAgent(self):
+		element = self.driver.find_element_by_class_name("info")
+		html = element.get_attribute('innerHTML')
+		self.assertIn("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36", html)
 
 	def test_appVersion(self):
 		value = self.driver.execute_script("return navigator.appVersion")
@@ -89,15 +94,13 @@ class JavascriptTests(unittest.TestCase):
 		value = self.driver.execute_script("return screen.pixelDepth")
 		self.assertEqual(24, value)
 
-	# def test_Avail_Height(self):
-	# 	element = self.driver.find_element_by_id("availHeight")
-	# 	html = element.get_attribute('innerHTML')
-	# 	self.assertIn("Navigator", html)
+	def test_Avail_Height(self):
+		value = self.driver.execute_script("return screen.availHeight")
+		self.assertGreater(value, 0)
 
-	# def test_Avail_Width(self):
-	# 	element = self.driver.find_element_by_id("availWidth")
-	# 	html = element.get_attribute('innerHTML')
-	# 	self.assertIn("Navigator", html)
+	def test_Avail_Width(self):
+		value = self.driver.execute_script("return screen.availWidth")
+		self.assertGreater(value, 0)
 
 	def test_Avail_Left(self):
 		value = self.driver.execute_script("return screen.availLeft")

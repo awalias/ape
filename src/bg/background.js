@@ -10,6 +10,10 @@ function loadScript(scriptName, callback) {
     document.head.appendChild(scriptEl);
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 loadScript("../src/profiles/profiles", function() {
 	localStorage["profiles"] = JSON.stringify(profiles);
 });
@@ -59,8 +63,46 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	        });
     	} else if (request.active) {
     		sendResponse({ "active" : localStorage["ape-active"],
-    					   "profile_number" : localStorage["profile_number"] 
+    					   "profile_number" : JSON.parse(localStorage["tabStore"])[sender.tab.id] 
     		});
+    	} else if (request.setTabProfiles) {
+    		setTabProfiles();
+     	} else if (request.clearTabProfiles) {
+    		clearTabProfiles();
     	}
     }
 );
+
+// TODO: clear or rebuild tabStore on extension toggle
+// When activated, assign each tab a profile
+var setTabProfiles = function() {
+	chrome.tabs.query({}, function(tabs) {
+		tabStore = {};
+	    for (var i = 0; i < tabs.length; i++) {
+	   		tabStore[tabs[i].id] = getRandomInt(0, JSON.parse(localStorage["profiles"]).length-1);               
+	    }
+	    localStorage["tabStore"] = JSON.stringify(tabStore);
+	});
+}
+
+// For when extension is deactivated
+var clearTabProfiles = function() {
+	localStorage["tabStore"] = JSON.stringify({});
+}
+
+// invoked when extension loads
+setTabProfiles();
+
+chrome.tabs.onCreated.addListener(function(tab) {
+	tabStore = JSON.parse(localStorage["tabStore"])
+	tabStore[tab.id] = getRandomInt(0, JSON.parse(localStorage["profiles"]).length-1);
+	localStorage["tabStore"] = JSON.stringify(tabStore);
+});
+
+chrome.tabs.onRemoved.addListener( function(tabId, removeInfo) {
+	tabStore = JSON.parse(localStorage["tabStore"]);
+	delete tabStore[tabId];
+	localStorage["tabStore"] = JSON.stringify(tabStore);
+});
+
+

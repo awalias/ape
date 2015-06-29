@@ -61,25 +61,42 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
  chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        if (request.newIconPath) {
-	        chrome.browserAction.setIcon({
-	            path: "../../icons/"+request.newIconPath
-	        });
-    	} else if (request.active) {
+
+    	// is plugin active?
+        if (request.active) { 
+
     		sendResponse({ "active" : localStorage["ape-active"],
     					   "profile_number" : JSON.parse(localStorage["tabStore"])[sender.tab.id],
     					   "hide_plugins" : localStorage["hide_plugins"] 
     		});
+
+    	// hide or don't hide navigator.plugin information
     	} else if (request.hide_plugins) {
     		if (request.hide_plugins == "true") {
     			localStorage["hide_plugins"] = "true";
     		} else {
     			localStorage["hide_plugins"] = "false";
     		}
-    	} else if (request.setTabProfiles) {
-    		setTabProfiles();
-     	} else if (request.clearTabProfiles) {
-    		clearTabProfiles();
+
+    	// activate or deactivate plugin
+    	} else if (request.activate) { 
+
+    		if (request.activate == "true") {
+    			localStorage["ape-active"]=true;
+    			setTabProfiles();
+		        chrome.browserAction.setIcon({
+		            path: "../../icons/icon19.png"
+		        });
+
+    		} else {
+
+    			localStorage["ape-active"]=false;
+    			clearTabProfiles();
+		        chrome.browserAction.setIcon({
+		            path: "../../icons/officon19.png"
+		        });
+
+    		}
     	}
     }
 );

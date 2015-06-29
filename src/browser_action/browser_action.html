@@ -16,20 +16,19 @@
 	h1 {
 		font-size: 2em;
 	}
+	.toggle-label {
+		margin-left: 5px;
+	}
 </style>
 
 <div id="mainPopup">
 <h1>APE <small class="tagline">Ant's Privacy Extension</small></h1>
 <div class="checkbox" style="padding-top:10px;">
-  <label>
     <input type="checkbox" id="active" data-toggle="toggle" checked>
-    <span id="active_text">APE is active</span>
-  </label>
+    <span class="toggle-label" id="active_text">APE is active</span>
 </div>
 <div class="checkbox" style="padding-top:10px;">
-  <label>
     <input type="checkbox" id="hide_plugins" data-toggle="toggle">
-    <span id="hide_plugins_text">Hide Plugins</span>
-  </label>
+    <span class="toggle-label" id="hide_plugins_text">Hide Plugins</span>
 </div>
 </div>

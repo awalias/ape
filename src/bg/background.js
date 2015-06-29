@@ -29,7 +29,9 @@ var requestFilter = {
 };
 
 chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
-	if (localStorage['ape-active']!="false") {
+	if (localStorage['ape-active']!="false" && details.tabId != -1) {
+
+		var tabStore = JSON.parse(localStorage["tabStore"])
 
 		var headers = details.requestHeaders;
 
@@ -45,11 +47,12 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 			}
 		}
 		if(UA_index != -1) {
-			headers[UA_index].value = JSON.parse(localStorage["profiles"])[localStorage["profile_number"]].userAgent;
+			headers[UA_index].value = JSON.parse(localStorage["profiles"])[tabStore[details.tabId.toString()]].userAgent;
 		}
 		if(AL_index != -1) {
-			headers[AL_index].value = JSON.parse(localStorage["profiles"])[localStorage["profile_number"]].acceptedLanguages;
+			headers[AL_index].value = JSON.parse(localStorage["profiles"])[tabStore[details.tabId.toString()]].acceptedLanguages;
 		}
+
 	} // end if (localStorage['ape-active']);
 
 	return {requestHeaders: headers};

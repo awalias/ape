@@ -19,6 +19,7 @@ loadScript("../src/profiles/profiles", function() {
 });
 
 localStorage["profile_number"] = 0;
+localStorage["hide_plugins"] = "false";
 
 //example of using a message handler from the inject scripts
 var requestFilter = {
@@ -63,8 +64,15 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	        });
     	} else if (request.active) {
     		sendResponse({ "active" : localStorage["ape-active"],
-    					   "profile_number" : JSON.parse(localStorage["tabStore"])[sender.tab.id] 
+    					   "profile_number" : JSON.parse(localStorage["tabStore"])[sender.tab.id],
+    					   "hide_plugins" : localStorage["hide_plugins"] 
     		});
+    	} else if (request.hide_plugins) {
+    		if (request.hide_plugins == "true") {
+    			localStorage["hide_plugins"] = "true";
+    		} else {
+    			localStorage["hide_plugins"] = "false";
+    		}
     	} else if (request.setTabProfiles) {
     		setTabProfiles();
      	} else if (request.clearTabProfiles) {

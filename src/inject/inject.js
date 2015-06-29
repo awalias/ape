@@ -2,8 +2,9 @@
 chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
     var active = response.active;
     var profile_number = response.profile_number;
+    var hide_plugins = response.hide_plugins;
 
-	var actualCode =  '(' + function(ua_profile) {
+	var actualCode =  '(' + function(ua_profile, hide_plugins) {
 	    'use strict';
 	    
 	    var mock_date = function() {
@@ -202,13 +203,19 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		            enumerable: true,
 		            writable: false
 		        },
-		        plugins: {
-		            value: ua_profile.plugins,
-		            configurable: false,
-		            enumerable: true,
-		            writable: false
-		        },
 		    });
+
+		    if (hide_plugins == "true") {
+			    Object.defineProperties(fake_navigator, {
+			        plugins: {
+			            value: undefined,
+			            configurable: false,
+			            enumerable: true,
+			            writable: false
+			        },
+			    });
+			}
+
 		    Object.defineProperty(window, 'navigator', {
 		        value: fake_navigator,
 		        configurable: false,
@@ -222,7 +229,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 	    mock_screen();
 	    mock_date();
 
-	} + ')(' + JSON.stringify(profiles[profile_number]) +');';
+	} + ')(' + JSON.stringify(profiles[profile_number]) + ',' + JSON.stringify(hide_plugins) + ');';
 
 	if (active!="false") {
 		document.documentElement.setAttribute('onreset', actualCode);

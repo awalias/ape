@@ -7,6 +7,29 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 	var actualCode =  '(' + function(ua_profile, hide_plugins) {
 	    'use strict';
 	    
+	    var protect_font_detection = function() {
+			Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+			    enumerable: true,
+			    configurable: true,
+			    get: function(){
+			        return 42;
+			    },
+			    set: function(newval){
+			        this.setAttribute('src',newval);
+			    }
+			});
+			Object.defineProperty(HTMLElement.prototype, 'offsetHeight', {
+			    enumerable: true,
+			    configurable: true,
+			    get: function(){
+			        return 42;
+			    },
+			    set: function(newval){
+			        this.setAttribute('src',newval);
+			    }
+			});
+	    }
+
 	    var mock_date = function() {
 	    	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 	  			"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -228,6 +251,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 	    mock_navigator();
 	    mock_screen();
 	    mock_date();
+	    protect_font_detection();
 
 	} + ')(' + JSON.stringify(profiles[profile_number]) + ',' + JSON.stringify(hide_plugins) + ');';
 

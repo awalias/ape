@@ -6,7 +6,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 
 	var actualCode =  '(' + function(ua_profile, hide_plugins) {
 	    'use strict';
-	    
+
 	    var protect_font_detection = function() {
 			Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
 			    enumerable: true,
@@ -15,7 +15,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			        return 42;
 			    },
 			    set: function(newval){
-			        this.setAttribute('src',newval);
+			        this.setAttribute('offsetWidth',newval);
 			    }
 			});
 			Object.defineProperty(HTMLElement.prototype, 'offsetHeight', {
@@ -25,7 +25,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			        return 42;
 			    },
 			    set: function(newval){
-			        this.setAttribute('src',newval);
+			        this.setAttribute('offsetHeight',newval);
 			    }
 			});
 	    }

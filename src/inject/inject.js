@@ -7,12 +7,16 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 	var actualCode =  '(' + function(ua_profile, hide_plugins) {
 	    'use strict';
 
+		function getRandomInt(min, max) {
+		    return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
 	    var protect_font_detection = function() {
 			Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
 			    enumerable: true,
 			    configurable: true,
 			    get: function(){
-			        return 42;
+			        return this.clientWidth + getRandomInt(0, 5);
 			    },
 			    set: function(newval){
 			        this.setAttribute('offsetWidth',newval);
@@ -22,7 +26,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			    enumerable: true,
 			    configurable: true,
 			    get: function(){
-			        return 42;
+			        return this.clientHeight + getRandomInt(0, 5);
 			    },
 			    set: function(newval){
 			        this.setAttribute('offsetHeight',newval);

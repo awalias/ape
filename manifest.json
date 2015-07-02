@@ -1,6 +1,6 @@
 {
   "name": "APE : Ant's Privacy Extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "This extension protects your privacy while browsing the web",
   "icons": {

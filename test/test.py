@@ -28,14 +28,17 @@ class JavascriptTests(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(self):
+		# change profile.js for tests
+		os.rename("../src/profiles/profiles.js", "../src/profiles/temp.profiles.js")
+		os.rename("../src/profiles/test.profiles.js", "../src/profiles/profiles.js")
+
 		chop = webdriver.ChromeOptions()
 		chop.add_argument("--load-extension=" + "../");
 		# Start chromedriver
 		if os.uname()[0] == "Darwin":
 			self.driver = webdriver.Chrome('../../chromedriver', chrome_options = chop)
-
 		self.driver.get('https://panopticlick.eff.org/index.php?action=log&js=yes');
-		time.sleep(7)
+		time.sleep(10)
 		element = self.driver.find_element_by_id("results")
 		html = element.get_attribute('innerHTML')
 		self.htmlTableData = getHtmlTableData(html)
@@ -126,7 +129,8 @@ class JavascriptTests(unittest.TestCase):
 	@classmethod
 	def tearDownClass(self):
 		#self.driver.quit()
-		pass
+		os.rename("../src/profiles/profiles.js", "../src/profiles/test.profiles.js")
+		os.rename("../src/profiles/temp.profiles.js", "../src/profiles/profiles.js")
 
 if __name__=="__main__":
 	unittest.main(exit=False)

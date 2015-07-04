@@ -230,6 +230,12 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		            enumerable: true,
 		            writable: false
 		        },
+		        hasOwnProperty: {
+					value: function() { return false },
+					configurable: false,
+		            enumerable: true,
+		            writable: false
+		        }
 		    });
 
 		    if (hide_plugins == "true") {

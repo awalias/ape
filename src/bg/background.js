@@ -23,6 +23,8 @@ function execute_background() {
 	// invoked when extension loads
 	localStorage["profile_number"] = 0;
 	localStorage["hide_plugins"] = "false";
+	localStorage["spoof_offset"] = "false";
+	localStorage["spoof_timezone"] = "true";
 	localStorage["ape-active"] = "true";
 
 	//example of using a message handler from the inject scripts
@@ -71,7 +73,9 @@ function execute_background() {
 
 	    		sendResponse({ "active" : localStorage["ape-active"],
 	    					   "profile_number" : JSON.parse(localStorage["tabStore"])[sender.tab.id],
-	    					   "hide_plugins" : localStorage["hide_plugins"] 
+	    					   "hide_plugins" : localStorage["hide_plugins"],
+	    					   "spoof_offset" : localStorage["spoof_offset"],
+	    					   "spoof_timezone" : localStorage["spoof_timezone"]
 	    		});
 
 	    	// hide or don't hide navigator.plugin information
@@ -80,6 +84,22 @@ function execute_background() {
 	    			localStorage["hide_plugins"] = "true";
 	    		} else {
 	    			localStorage["hide_plugins"] = "false";
+	    		}
+
+	    	// set spoof_offset
+	    	} else if (request.spoof_offset) {
+	    		if (request.spoof_offset == "true") {
+	    			localStorage["spoof_offset"] = "true";
+	    		} else {
+	    			localStorage["spoof_offset"] = "false";
+	    		}
+
+	    	// set spoof_timezone
+	    	} else if (request.spoof_timezone) {
+	    		if (request.spoof_timezone == "true") {
+	    			localStorage["spoof_timezone"] = "true";
+	    		} else {
+	    			localStorage["spoof_timezone"] = "false";
 	    		}
 
 	    	// activate or deactivate plugin

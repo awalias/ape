@@ -7,40 +7,38 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title id="title"></title>
-        
-        <!-- Stylesheets -->
-        <link id="favicon" rel="icon" href="">
-        <link rel="stylesheet" href="lib/default.css" media="screen">
-        <link rel="stylesheet" href="css/main.css" media="screen">
-        <link rel="stylesheet" href="css/setting.css" media="screen">
-        <link rel="stylesheet" href="custom.css" media="screen">
-        
-        <!-- JavaScripts -->
-        <script src="lib/mootools-core.js"></script>
-        <script src="lib/store.js"></script>
-        <script src="js/classes/tab.js"></script>
-        <script src="js/classes/setting.js"></script>
-        <script src="js/classes/search.js"></script>
-        <script src="js/classes/fancy-settings.js"></script>
-        <script src="i18n.js"></script>
-        <script src="js/i18n.js"></script>
-        <script src="manifest.js"></script>
+        <title id="Settings"></title>
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <script src="../../js/jquery/jquery.js"></script>
+        <link href="../../css/bootstrap-toggle.css" rel="stylesheet">
+        <script src="../../js/bootstrap-toggle.js"></script>
+        <link href="settings.css" rel="stylesheet">
         <script src="settings.js"></script>
     </head>
-    <body class="no-select">
-        <div id="sidebar" class="fancy">
-            <img id="icon" src="" alt=""><h1 id="settings-label"></h1>
-            <div id="tab-container">
-                <div id="search-container" class="tab">
-                    <input id="search" type="search" placeholder="">
-                </div>
+    <body>
+        <div style="padding-left:50px;" class="container">
+            <h1><img src="../../icons/icon128.png"/>APE <small class="tagline">Ant's Privacy Extension</small></h1>
+            <hr>
+            <h3>Settings</h3>
+            <div class="checkbox" style="padding-top:10px;">
+                <input type="checkbox" id="active" data-toggle="toggle" checked>
+                <span class="toggle-label" id="active_text">APE is active</span>
             </div>
-        </div>
-        <div id="content">
-            <div id="search-result-container" class="tab-content">
-                <h2 id="search-label"></h2>
+            <div class="checkbox" style="padding-top:10px;">
+                <input type="checkbox" id="spoof_timezone" data-toggle="toggle">
+                <span class="toggle-label" id="spoof_timezone_text">Spoof Timezone</span>
             </div>
+            <div class="checkbox" style="padding-top:10px;">
+                <input type="checkbox" id="spoof_offset" data-toggle="toggle">
+                <span class="toggle-label" id="prevent_font_text">Prevent Font Fingerprinting <small>(can cause some elements to display incorrectly)</small></span>
+            </div>
+            <div class="checkbox" style="padding-top:10px;">
+                <input type="checkbox" id="hide_plugins" data-toggle="toggle">
+                <span class="toggle-label" id="hide_plugins_text">Spoof Plugin List <small>(can cause some video players to not load)</small></span>
+            </div>
+            <hr>
+            <h3>Information</h3>
+            <p>APE is a privacy enhancing tool aimed at protecting you aginst Browser Fingerpinting attacks.</p>
         </div>
     </body>
 </html>

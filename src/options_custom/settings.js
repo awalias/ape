@@ -1,60 +1,73 @@
-window.addEvent("domready", function () {
-    // Option 1: Use the manifest:
-    new FancySettings.initWithManifest(function (settings) {
-        settings.manifest.myButton.addEvent("action", function () {
-            alert("You clicked me!");
-        });
-    });
+  $(function() {
+  	$('#active').ready(function() {
+  		if (localStorage["ape-active"]=="true") {
+			$('#active').bootstrapToggle('on');
+  		} else if (localStorage["ape-active"]=="false") {
+  			$('#active').bootstrapToggle('off');
+  		}
+
+      if (localStorage["hide_plugins"]=="true") {
+      $('#hide_plugins').bootstrapToggle('on');
+      } else if (localStorage["hide_plugins"]=="false") {
+        $('#hide_plugins').bootstrapToggle('off');
+      }
+
+      if (localStorage["spoof_timezone"]=="true") {
+      $('#spoof_timezone').bootstrapToggle('on');
+      } else if (localStorage["spoof_timezone"]=="false") {
+        $('#spoof_timezone').bootstrapToggle('off');
+      }
+
+      if (localStorage["spoof_offset"]=="true") {
+      $('#spoof_offset').bootstrapToggle('on');
+      } else if (localStorage["spoof_offset"]=="false") {
+        $('#spoof_offset').bootstrapToggle('off');
+      }
+  	});
+
     
-    // Option 2: Do everything manually:
-    /*
-    var settings = new FancySettings("My Extension", "icon.png");
-    
-    var username = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "username",
-        "type": "text",
-        "label": i18n.get("username"),
-        "text": i18n.get("x-characters")
-    });
-    
-    var password = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "password",
-        "type": "text",
-        "label": i18n.get("password"),
-        "text": i18n.get("x-characters-pw"),
-        "masked": true
-    });
-    
-    var myDescription = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "myDescription",
-        "type": "description",
-        "text": i18n.get("description")
-    });
-    
-    var myButton = settings.create({
-        "tab": "Information",
-        "group": "Logout",
-        "name": "myButton",
-        "type": "button",
-        "label": "Disconnect:",
-        "text": "Logout"
-    });
-    
-    // ...
-    
-    myButton.addEvent("action", function () {
-        alert("You clicked me!");
-    });
-    
-    settings.align([
-        username,
-        password
-    ]);
-    */
-});
+    $('#active').change(function() {
+    	if ($(this).prop('checked')) {
+
+      		$('#active_text').text('APE is active');
+          chrome.runtime.sendMessage({ "activate" : "true" });
+
+      	} else {
+
+      		$('#active_text').text('APE is inactive');
+          chrome.runtime.sendMessage({ "activate" : "false" })
+          $('#hide_plugins').bootstrapToggle('off');
+
+      	}
+    })
+
+    $('#hide_plugins').change(function() {
+      if ($(this).prop('checked')) {
+          chrome.runtime.sendMessage({ "hide_plugins" : "true" });
+
+          $('#active').bootstrapToggle('on');
+        } else {
+          chrome.runtime.sendMessage({ "hide_plugins" : "false" });
+        }
+    })
+
+    $('#spoof_timezone').change(function() {
+      if ($(this).prop('checked')) {
+          chrome.runtime.sendMessage({ "spoof_timezone" : "true" });
+
+          $('#active').bootstrapToggle('on');
+        } else {
+          chrome.runtime.sendMessage({ "spoof_timezone" : "false" });
+        }
+    })
+
+    $('#spoof_offset').change(function() {
+      if ($(this).prop('checked')) {
+          chrome.runtime.sendMessage({ "spoof_offset" : "true" });
+
+          $('#active').bootstrapToggle('on');
+        } else {
+          chrome.runtime.sendMessage({ "spoof_offset" : "false" });
+        }
+    })
+  })

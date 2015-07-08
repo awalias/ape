@@ -16,7 +16,7 @@ profiles = [
             "width": "1680"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.90 Safari/537.1"
     },
     {
@@ -36,7 +36,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.104 Safari/537.36"
     },
     {
@@ -56,7 +56,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -76,7 +76,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -96,7 +96,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"
     },
     {
@@ -116,7 +116,7 @@ profiles = [
             "width": "1600"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -136,7 +136,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -156,7 +156,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
     },
     {
@@ -176,7 +176,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -196,7 +196,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -216,7 +216,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -236,7 +236,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -256,7 +256,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -276,7 +276,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -296,7 +296,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18"
     },
     {
@@ -316,7 +316,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -336,7 +336,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -356,7 +356,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -376,7 +376,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -396,7 +396,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -416,7 +416,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5"
     },
     {
@@ -436,7 +436,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -456,7 +456,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -476,7 +476,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -496,7 +496,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
     },
     {
@@ -516,7 +516,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
     },
     {
@@ -536,7 +536,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -556,7 +556,7 @@ profiles = [
             "width": "1536"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -576,7 +576,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -596,7 +596,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -616,7 +616,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2231.0 Safari/537.36"
     },
     {
@@ -636,7 +636,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
     },
     {
@@ -656,7 +656,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -676,7 +676,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -696,7 +696,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -716,7 +716,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -736,7 +736,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -756,7 +756,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -776,7 +776,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -796,7 +796,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -816,7 +816,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -836,7 +836,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -856,7 +856,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
     },
     {
@@ -876,7 +876,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -896,7 +896,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -916,7 +916,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -936,7 +936,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -956,7 +956,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -976,7 +976,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -996,7 +996,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
     },
     {
@@ -1016,7 +1016,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
     },
     {
@@ -1036,7 +1036,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -1056,7 +1056,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1076,7 +1076,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1096,7 +1096,7 @@ profiles = [
             "width": "2560"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.4.10 (KHTML, like Gecko) Version/8.0.4 Safari/600.4.10"
     },
     {
@@ -1116,7 +1116,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1136,7 +1136,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36"
     },
     {
@@ -1156,7 +1156,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1176,7 +1176,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1196,7 +1196,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/6.1.3 Safari/537.75.14"
     },
     {
@@ -1216,7 +1216,7 @@ profiles = [
             "width": "1600"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1236,7 +1236,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1256,7 +1256,7 @@ profiles = [
             "width": "1920"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1276,7 +1276,7 @@ profiles = [
             "width": "1536"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -1296,7 +1296,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36"
     },
     {
@@ -1316,7 +1316,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18"
     },
     {
@@ -1336,7 +1336,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -1356,7 +1356,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1376,7 +1376,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -1396,7 +1396,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -1416,7 +1416,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -1436,7 +1436,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1456,7 +1456,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1476,7 +1476,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -1496,7 +1496,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.4.10 (KHTML, like Gecko) Version/8.0.4 Safari/600.4.10"
     },
     {
@@ -1516,7 +1516,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1536,7 +1536,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -1556,7 +1556,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1576,7 +1576,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; CMDTDFJS; B8G; InfoPath.3; rv:11.0) like Gecko"
     },
     {
@@ -1596,7 +1596,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1616,7 +1616,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     },
     {
@@ -1636,7 +1636,7 @@ profiles = [
             "width": "1440"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1656,7 +1656,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1676,7 +1676,7 @@ profiles = [
             "width": "1600"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1696,7 +1696,7 @@ profiles = [
             "width": "1600"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1716,7 +1716,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.65 Safari/537.36"
     },
     {
@@ -1736,7 +1736,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -1756,7 +1756,7 @@ profiles = [
             "width": "1280"
         },
         "setToUTC": true,
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36"
     }
 ]

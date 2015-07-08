@@ -3,8 +3,10 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
     var active = response.active;
     var profile_number = response.profile_number;
     var hide_plugins = response.hide_plugins;
+    var spoof_timezone = response.spoof_timezone;
+    var spoof_offset = response.spoof_offset;
 
-	var actualCode =  '(' + function(ua_profile, hide_plugins) {
+	var actualCode =  '(' + function(ua_profile, hide_plugins, spoof_offset, spoof_timezone) {
 	    'use strict';
 
 		function getRandomInt(min, max) {
@@ -62,13 +64,19 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			Date.prototype.toString = function()
 			{
 				/* Sat Jun 12 2015 14:7:56 GMT */
+				var tz = "";
+				if (ua_profile.timezone > 0) {
+					tz = "+"+(ua_profile.timezone/60).toString();
+				} else if (ua_profile.timezone < 0) {
+					tz = (ua_profile.timezone/60).toString();
+				}
 			    return  dayNames[this.getDay()] + " " +
 			    	monthNames[this.getMonth()] + " " + 
 			    	('0' + this.getDate()).slice(-2)    + " " +  
 			     	this.getFullYear() + " " + 
 			     	('0' + this.getHours()).slice(-2)   + ":" + 
 			     	('0' + this.getMinutes()).slice(-2) + ":" + 
-			     	('0' + this.getSeconds()).slice(-2) + " GMT";
+			     	('0' + this.getSeconds()).slice(-2) + " GMT" + tz;
 			}
 
 			if (ua_profile.setToUTC) {
@@ -105,7 +113,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 				}
 
 				Date.prototype.getHours = function() {	
-					return this.getUTCHours();	
+					return this.getUTCHours() + (ua_profile.timezone/60);
 				}
 
 				Date.prototype.getMilliseconds = function() {
@@ -260,10 +268,15 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		/* Main */
 	    mock_navigator();
 	    mock_screen();
-	    mock_date();
-	    protect_font_detection();
+	    if (spoof_timezone == "true") { 
+	    	mock_date();
+	    }
+	    if (spoof_offset == "true" ) {
+	    	protect_font_detection();
+	    }
 
-	} + ')(' + JSON.stringify(profiles[profile_number]) + ',' + JSON.stringify(hide_plugins) + ');';
+	} + ')(' + JSON.stringify(profiles[profile_number]) + ',' + JSON.stringify(hide_plugins) + ',' 
+	+ JSON.stringify(spoof_offset) + ',' + JSON.stringify(spoof_timezone) + ');';
 
 	if (active!="false") {
 		document.documentElement.setAttribute('onreset', actualCode);

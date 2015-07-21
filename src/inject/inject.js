@@ -18,7 +18,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			    enumerable: true,
 			    configurable: true,
 			    get: function(){
-			        return this.clientWidth + getRandomInt(0, 5);
+			        return this.clientWidth + (getRandomInt(-5, 5)/100)*this.clientWidth;
 			    },
 			    set: function(newval){
 			        this.setAttribute('offsetWidth',newval);
@@ -28,7 +28,7 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 			    enumerable: true,
 			    configurable: true,
 			    get: function(){
-			        return this.clientHeight + getRandomInt(0, 5);
+			        return this.clientHeight + (getRandomInt(-5, 5)/100)*this.clientHeight;
 			    },
 			    set: function(newval){
 			        this.setAttribute('offsetHeight',newval);

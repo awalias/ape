@@ -11,11 +11,11 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "800",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1280"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12"
     },
@@ -31,12 +31,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
     },
     {
@@ -51,12 +51,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1080",
+            "height": "800",
             "pixelDepth": 24,
-            "width": "1920"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -71,12 +71,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "800",
             "pixelDepth": 24,
-            "width": "1366"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -95,8 +95,8 @@ profiles = [
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
     },
     {
@@ -111,12 +111,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1080",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1920"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
     },
     {
@@ -131,11 +131,11 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1024",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1280"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": 120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:39.0) Gecko/20100101 Firefox/39.0"
     },
@@ -151,11 +151,11 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1024"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": 120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36"
     },
@@ -171,12 +171,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"
     },
     {
@@ -191,12 +191,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "800",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1280"
         },
         "setToUTC": "true",
-        "timezone": 0,
+        "timezone": 120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
     },
     {
@@ -211,12 +211,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
     },
     {
@@ -231,12 +231,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "800",
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": 120,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
     },
     {
@@ -251,12 +251,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1080",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1920"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/600.6.3 (KHTML, like Gecko) Version/7.1.6 Safari/537.85.15"
     },
     {
@@ -271,12 +271,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1080",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1920"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"
     },
     {
@@ -295,8 +295,8 @@ profiles = [
             "pixelDepth": 24,
             "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"
     },
     {
@@ -311,12 +311,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1024"
         },
         "setToUTC": "true",
-        "timezone": 0,
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (iPad; CPU OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F69 Safari/600.1.4"
     },
     {
@@ -331,12 +331,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "1080",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1920"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
     },
     {
@@ -351,9 +351,9 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1024",
             "pixelDepth": 24,
-            "width": "1366"
+            "width": "1280"
         },
         "setToUTC": "true",
         "timezone": 0,
@@ -375,8 +375,8 @@ profiles = [
             "pixelDepth": 24,
             "width": "1024"
         },
-        "setToUTC": "false",
-        "timezone": 60,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:39.0) Gecko/20100101 Firefox/39.0"
     },
     {
@@ -391,12 +391,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1024",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": 120,
+        "setToUTC": "true",
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.6 Safari/600.6.3"
     },
     {
@@ -411,12 +411,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1366"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/7.1.7 Safari/537.85.16"
     },
     {
@@ -433,9 +433,9 @@ profiles = [
             "colorDepth": 24,
             "height": "768",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1366"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": -120,
         "userAgent": "Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4"
     },
@@ -451,12 +451,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "800",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": 60,
+        "setToUTC": "true",
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18"
     },
     {
@@ -471,12 +471,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "800",
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11) AppleWebKit/601.1.37 (KHTML, like Gecko) Version/9.0 Safari/601.1.37"
     },
     {
@@ -491,12 +491,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "1024",
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": 120,
+        "setToUTC": "true",
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36"
     },
     {
@@ -511,12 +511,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1024"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36"
     },
     {
@@ -531,12 +531,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1024"
         },
-        "setToUTC": "false",
-        "timezone": 60,
+        "setToUTC": "true",
+        "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36"
     },
     {
@@ -551,12 +551,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "800",
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:38.0) Gecko/20100101 Firefox/38.0"
     },
     {
@@ -571,12 +571,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1024",
+            "height": "1080",
             "pixelDepth": 24,
-            "width": "1280"
+            "width": "1920"
         },
-        "setToUTC": "false",
-        "timezone": 60,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.10 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.10"
     },
     {
@@ -591,11 +591,11 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "800",
+            "height": "1024",
             "pixelDepth": 24,
             "width": "1280"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
     },
@@ -616,7 +616,7 @@ profiles = [
             "width": "1366"
         },
         "setToUTC": "true",
-        "timezone": 0,
+        "timezone": -60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"
     },
     {
@@ -631,12 +631,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1080",
+            "height": "768",
             "pixelDepth": 24,
-            "width": "1920"
+            "width": "1024"
         },
-        "setToUTC": "false",
-        "timezone": -60,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.4.10 (KHTML, like Gecko) Version/8.0.4 Safari/600.4.10"
     },
     {
@@ -655,8 +655,8 @@ profiles = [
             "pixelDepth": 24,
             "width": "1920"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 60,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.11 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.11"
     },
     {
@@ -671,12 +671,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "1080",
+            "height": "1024",
             "pixelDepth": 24,
-            "width": "1920"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 0,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2"
     },
     {
@@ -691,11 +691,11 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1080",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1920"
         },
-        "setToUTC": "false",
+        "setToUTC": "true",
         "timezone": -120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36"
     },
@@ -713,7 +713,7 @@ profiles = [
             "colorDepth": 24,
             "height": "768",
             "pixelDepth": 24,
-            "width": "1024"
+            "width": "1366"
         },
         "setToUTC": "true",
         "timezone": 0,
@@ -731,12 +731,12 @@ profiles = [
             "availTop": 0,
             "availWidth": "window.innerWidth",
             "colorDepth": 24,
-            "height": "768",
+            "height": "1024",
             "pixelDepth": 24,
-            "width": "1366"
+            "width": "1280"
         },
-        "setToUTC": "false",
-        "timezone": -120,
+        "setToUTC": "true",
+        "timezone": 120,
         "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:38.0) Gecko/20100101 Firefox/38.0"
     }
 ]

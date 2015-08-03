@@ -22,8 +22,8 @@ loadScript("../src/profiles/profiles", function() {
 function execute_background() {
 	// invoked when extension loads
 	localStorage["profile_number"] = 0;
-	localStorage["hide_plugins"] = "false";
-	localStorage["spoof_offset"] = "false";
+	localStorage["hide_plugins"] = "true";
+	localStorage["spoof_offset"] = "true";
 	localStorage["spoof_timezone"] = "true";
 	localStorage["ape-active"] = "true";
 

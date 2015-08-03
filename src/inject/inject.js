@@ -13,6 +13,10 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		    return Math.floor(Math.random() * (max - min + 1)) + min;
 		}
 
+		function getRandChar(charset) {
+			return charset.charAt(Math.floor(Math.random() * charset.length))
+		}
+
 	    var protect_font_detection = function() {
 			Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
 			    enumerable: true,
@@ -265,7 +269,23 @@ chrome.runtime.sendMessage({"active": "ape-active"}, function(response){
 		    });
 		}
 
+		var mock_canvas = function() {
+			var old = HTMLCanvasElement.prototype.toDataURL;
+			HTMLCanvasElement.prototype.toDataURL = function() {
+				var res = old.apply(this, arguments);
+				res = res.split(",");
+
+				// add noise
+				for (var i = 0 ; i < getRandomInt(1,5); i++) {
+					res[1] = res[1] + getRandChar(res[1]);
+				}
+
+				return res.join(",");
+			};
+		}
+
 		/* Main */
+		mock_canvas();
 	    mock_navigator();
 	    mock_screen();
 	    if (spoof_timezone == "true") { 
